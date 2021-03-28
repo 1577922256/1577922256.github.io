@@ -1,38 +1,34 @@
-
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
 		<title></title>
 		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
-				$(":input").click(function(){
-					$(":header").css("color","red");
-					$(":header+ul").css("list-style","url(img/list.gif)");
-					$(":header+ul>li>ul").css("list-style","url(img/list_icon.gif)");
+				$("a[href='#']").click(function(){
+					var flag=$("ul li:gt(0)").is(":visible");
+					if (flag) {
+						$("ul li:gt(0)").css("display","none");
+						$(this).text("(展开)");
+					} else{
+						$("ul li:gt(0)").css("display","list-item");
+						$(this).text("(收起)");
+					}
 				});
 			});
 		</script>
 	</head>
 	<body>
-		<h2>Web前端技术</h2>
+		<h3>笔记<a href="#">(收起)</a></h3>
 		<ul>
-			<li>使用DIv+Css设计前端页面
-			<ul>
-				<li>页面布局</li>
-				<li>美化页面</li>
-				<li>页面特效</li>
-			  </ul>
-			</li>
-			
-			<li>使用JavaScript+jQuery设计页面特效
-			<ul>
-				<li>JavaScript基础</li>
-				<li>jQuery选择器</li>
-				<li>jQuery操作Dom</li>
-			  </ul>
-			</li>
+			<li>C#</li>
+			<li>袁宇欣</li>
+			<li>刘宇</li>
+			<li>熊辉</li>
+			<li>时空终点</li>
+			<li>前任3：再见前任</li>
+			<li>冰雪奇缘</li>
+			<li>极品飞车</li>
 		</ul>
-		<p><input type="button"  value="改变样式" /></p>
 	</body>
 </html>
