@@ -22,13 +22,46 @@
 		<h3>笔记<a href="#">(收起)</a></h3>
 		<ul>
 			<li>C#</li>
-			<li>袁宇欣</li>
-			<li>刘宇</li>
-			<li>熊辉</li>
-			<li>时空终点</li>
-			<li>前任3：再见前任</li>
-			<li>冰雪奇缘</li>
-			<li>极品飞车</li>
+			<li>①添加确定按钮：
+private void 取消按钮的click属性
+{
+            string name = this.控件名.Text;
+            string tel = this.控件名.Text;
+            string no = this.控件名.Text;
+            string sex = this.控件名.Checked ? "男 " : "女";
+            string address = this.控件名.Text;
+            string sql = string.Format("insert into CustomersTb1(custName,custTel,custNO,custSex,Address) values('{0}',{1},{2},'{3}','{4}');",name,tel,no,sex,address,id);
+            bool result = DBHelper.ExecuteNonQuery(sql);
+            if (result)
+            {
+                MessageBox.Show("添加成功！");
+            }
+            else
+            {
+                MessageBox.Show("添加失败！");
+            }
+} 
+
+②取消按钮（清空控件内容）：
+privat void clear（）
+{
+string （控件名）=“（空）”；
+string （控件名）=“（空）”；
+string （控件名）=“（空）”；
+string （控件名）=“（空）”；
+}
+private void 取消按钮的click属性
+{
+clear（）；
+}
+
+③dgv显示数据：
+string sql = string.format（select * from 表名）；
+this.dataGridView1.DataSource = DBhelper.Enq(sql);
+
+④查询按钮：
+string 命名 = this.控件名.Text
+stri</li>
 		</ul>
 	</body>
 </html>
